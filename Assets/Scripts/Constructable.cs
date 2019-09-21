@@ -39,6 +39,7 @@ public class Constructable : MonoBehaviour
 		else
 		{
 			Debug.Log("item nao pertence a maquina");
+            Inventory.RespawnItem();
 		}
 		Debug.Log(itens[itemName]);
 	}
