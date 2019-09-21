@@ -6,15 +6,14 @@ public class Inventory : MonoBehaviour
 {
 
 	static Inventory instance = null;
-	static HashSet<string> itens;
 	static string currentItem = "iron";
+    private static GameObject currentItemReference;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		if (instance == null)
 		{
-			itens = new HashSet<string>();
 			instance = this;
 			DontDestroyOnLoad(this);
 		}
@@ -24,15 +23,10 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
-	public static void Add(string item)
+	public static void Set(string item, GameObject reference)
 	{
-		itens.Add(item);
 		currentItem = item;
-	}
-
-	public static bool Has(string item)
-	{
-		return itens.Contains(item);
+        currentItemReference = reference;
 	}
 
 	public static bool Has()
@@ -43,13 +37,19 @@ public class Inventory : MonoBehaviour
 	public static string Use()
 	{
 		string item = currentItem;
-		currentItem = "";
+        ClearItem();
 		return item;
 	}
 
 	public static void ClearItem()
 	{
 		currentItem = "";
+        currentItemReference = null;
 	}
 
+    public static void RespawnItem()
+    {
+        currentItemReference.SetActive(true);
+        ClearItem();
+    }
 }
