@@ -24,8 +24,9 @@ public class Constructable : MonoBehaviour
 	// Update is called once per frame
 	void ReceiveItem(string itemName)
 	{
-		bool? value = (bool)itensMap[itemName];
-		Debug.Log(value);
+		Debug.Log(itemName);
+        Debug.Log(itensMap);
+        bool? value = (bool?)itensMap[itemName];
 		if (value != null)
 		{
 			if (value == false)
@@ -43,7 +44,8 @@ public class Constructable : MonoBehaviour
 			Debug.Log("item nao pertence a maquina");
             Inventory.RespawnItem();
 		}
-		Debug.Log(itensMap[itemName]);
+        Inventory.ClearItem();
+		//Debug.Log(itensMap[itemName]);
 	}
 
 	// when the GameObjects collider arrange for this GameObject to travel to the left of the screen
