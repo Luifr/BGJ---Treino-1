@@ -22,9 +22,11 @@ public class Item : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Inventory.Set(name, gameObject);
         if (Inventory.Has())
-            Debug.Log("objeto adicionado");
+            return;
+
+        Inventory.Set(name, gameObject);
+
         gameObject.SetActive(false);
     }
 }
