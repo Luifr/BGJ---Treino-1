@@ -8,27 +8,29 @@ public class Constructable : MonoBehaviour
 	[SerializeField]
 	private string displayName;
 	[SerializeField]
-	private Hashtable itens;
+	private string[] itens;
+	private Hashtable itensMap;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		itens = new Hashtable();
-		itens.Add("iron", false);
-		itens.Add("cloth", false);
-		itens.Add("feathers", false);
+		itensMap = new Hashtable();
+		foreach (string item in itens)
+		{
+			itensMap.Add(item, false);
+		}
 	}
 
 	// Update is called once per frame
 	void ReceiveItem(string itemName)
 	{
-		bool? value = (bool)itens[itemName];
+		bool? value = (bool)itensMap[itemName];
 		Debug.Log(value);
 		if (value != null)
 		{
 			if (value == false)
 			{
-				itens[itemName] = true;
+				itensMap[itemName] = true;
 				Debug.Log("item adicionado");
 			}
 			else
@@ -40,7 +42,7 @@ public class Constructable : MonoBehaviour
 		{
 			Debug.Log("item nao pertence a maquina");
 		}
-		Debug.Log(itens[itemName]);
+		Debug.Log(itensMap[itemName]);
 	}
 
 	// when the GameObjects collider arrange for this GameObject to travel to the left of the screen

@@ -367,6 +367,100 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1436951433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1738183417092633239, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_Name
+      value: GliderConstructable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.171875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633232, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633233, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: itens.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633233, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: displayName
+      value: Glider
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633233, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: itens.Array.data[0]
+      value: feathers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633233, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: itens.Array.data[1]
+      value: iron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738183417092633233, guid: 0223c7ced7bcf5644b396f2bddfddcdc,
+        type: 3}
+      propertyPath: itens.Array.data[2]
+      value: cloth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0223c7ced7bcf5644b396f2bddfddcdc, type: 3}
 --- !u!1 &1567552934
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,8 +613,8 @@ GameObject:
   - component: {fileID: 1657215017}
   - component: {fileID: 1657215016}
   - component: {fileID: 1657215019}
-  - component: {fileID: 1657215020}
   - component: {fileID: 1657215021}
+  - component: {fileID: 1657215020}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
