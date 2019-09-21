@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
 
 	static Inventory instance = null;
 	static string currentItem = "iron";
-    private static GameObject currentItemReference;
+	private static GameObject currentItemReference;
 
 	// Start is called before the first frame update
 	void Start()
@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
 	public static void Set(string item, GameObject reference)
 	{
 		currentItem = item;
-        currentItemReference = reference;
+		currentItemReference = reference;
 	}
 
 	public static bool Has()
@@ -37,19 +37,19 @@ public class Inventory : MonoBehaviour
 	public static string Use()
 	{
 		string item = currentItem;
-        ClearItem();
+		ClearItem();
 		return item;
 	}
 
 	public static void ClearItem()
 	{
 		currentItem = "";
-        currentItemReference = null;
+		currentItemReference = null;
 	}
 
-    public static void RespawnItem()
-    {
-        currentItemReference.SetActive(true);
-        ClearItem();
-    }
+	public static void RespawnItem()
+	{
+		currentItemReference.SetActive(true);
+		ClearItem();
+	}
 }

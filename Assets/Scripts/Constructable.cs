@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class Constructable : MonoBehaviour
 {
@@ -10,10 +9,15 @@ public class Constructable : MonoBehaviour
 	[SerializeField]
 	private string[] itens;
 	private Hashtable itensMap;
+	private int itensToCollect;
+	private int itensCollected = 0;
+	public delegate void func();
+	public func TryEndGame;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		itensToCollect = itens.Length;
 		itensMap = new Hashtable();
 		foreach (string item in itens)
 		{
@@ -31,6 +35,9 @@ public class Constructable : MonoBehaviour
 			if (value == false)
 			{
 				itensMap[itemName] = true;
+				itensCollected++;
+				if (itensCollected == itensToCollect)
+					TryEndGame();
 				Debug.Log("item adicionado");
 			}
 			else
@@ -41,9 +48,14 @@ public class Constructable : MonoBehaviour
 		else
 		{
 			Debug.Log("item nao pertence a maquina");
-            Inventory.RespawnItem();
+			Inventory.RespawnItem();
 		}
 		Debug.Log(itensMap[itemName]);
+	}
+
+	public bool IsCompleted()
+	{
+		return itensCollected == itensToCollect;
 	}
 
 	// when the GameObjects collider arrange for this GameObject to travel to the left of the screen
