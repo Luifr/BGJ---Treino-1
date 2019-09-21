@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class Item : MonoBehaviour
+{
 
-    //public string name;
+    private string name;
     //public Sprite sprite;
     //public GameObject machine;
     //private BoxCollider2D collider;
@@ -12,6 +13,7 @@ public class Item : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         //collider = GetComponent<BoxCollider2D>();
+        name = gameObject.name;
     }
 
     // Update is called once per frame
@@ -20,6 +22,9 @@ public class Item : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        Inventory.Add(name);
+        if (Inventory.Has(name))
+            Debug.Log("objeto adicionado");
         Destroy(gameObject);
     }
 }
