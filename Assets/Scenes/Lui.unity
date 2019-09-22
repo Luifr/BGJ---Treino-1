@@ -302,12 +302,12 @@ PrefabInstance:
     - target: {fileID: 4478866799561363680, guid: 2cdeca6e5a4b43f479d7bd88c557d1a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4478866799561363680, guid: 2cdeca6e5a4b43f479d7bd88c557d1a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 4478866799561363680, guid: 2cdeca6e5a4b43f479d7bd88c557d1a4,
         type: 3}
@@ -353,11 +353,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478866799561363683, guid: 2cdeca6e5a4b43f479d7bd88c557d1a4,
-        type: 3}
-      propertyPath: canMove
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cdeca6e5a4b43f479d7bd88c557d1a4, type: 3}
@@ -499,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903453205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17254505, y: -0.5525823, z: -0.17382812}
+  m_LocalPosition: {x: -0.1, y: 0, z: -0.17382812}
   m_LocalScale: {x: 6, y: 0.1227, z: 1}
   m_Children: []
   m_Father: {fileID: 1649026212}
@@ -768,7 +763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567552934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.38, y: 0.15, z: -0.17382812}
+  m_LocalPosition: {x: -4.38, y: 0, z: -0.17382812}
   m_LocalScale: {x: 6, y: 0.1227, z: 1}
   m_Children: []
   m_Father: {fileID: 1649026212}
@@ -977,7 +972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680227640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.97, y: 0.11, z: -0.17382812}
+  m_LocalPosition: {x: 3.97, y: 0, z: -0.17382812}
   m_LocalScale: {x: 6, y: 0.1227, z: 1}
   m_Children: []
   m_Father: {fileID: 1649026212}
@@ -1098,6 +1093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NoMovementArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 300248777797806106, guid: c40d87b880c2af5418b6bf5a17eb3aae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 300248777797806116, guid: c40d87b880c2af5418b6bf5a17eb3aae,
         type: 3}
