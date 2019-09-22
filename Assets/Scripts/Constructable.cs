@@ -37,8 +37,7 @@ public class Constructable : MonoBehaviour
 			{
 				itensMap[itemName] = true;
 				itensCollected++;
-				if (itensCollected == itensToCollect)
-					TryEndGame();
+                if (itensCollected == itensToCollect) OnComplete();
 				Debug.Log("item adicionado");
 			}
 			else
@@ -54,6 +53,11 @@ public class Constructable : MonoBehaviour
         Inventory.ClearItem();
 		//Debug.Log(itensMap[itemName]);
 	}
+
+    private void OnComplete() {
+        TryEndGame();
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+    }
 
 	public bool IsCompleted()
 	{

@@ -41,7 +41,7 @@ public class PlayerPlatformerController : PhysicsObject
 				velocity.y = velocity.y * 0.5f;
 			}
 		}
-		if (!spriteRenderer.flipX) Debug.Log(move.x);
+		//if (!spriteRenderer.flipX) Debug.Log(move.x);
 		bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.1f) : (move.x < 0.0f));
 		if (flipSprite)
 		{

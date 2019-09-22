@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
 {
 
 	static Inventory instance = null;
-	static string currentItem;
+	static string currentItem = "";
 	private static GameObject currentItemReference;
 
 	// Start is called before the first frame update
@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
 
 	public static bool Has()
 	{
-		return currentItem != "";
+		return currentItem != "" && currentItem != null;
 	}
 
 	public static string Use()
